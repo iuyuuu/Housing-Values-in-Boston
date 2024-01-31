@@ -1,4 +1,4 @@
-# Housing Values in Boston- Linear Regression 
+## Housing Values in Boston- Linear Regression 
 
 ---
 The Boston housing dataset contused in this analysis contains information about median house value for 506 neighborhoods in Boston, MA. It is collected in 1970s. 
@@ -104,7 +104,7 @@ labs(x="Percentage of Lower Status of the Population", y="Median home value")
 ![svg](output_6_2.svg)
     
 
-## Simple regression to predict medium home value
+# Simple regression to predict medium home value
 Here we make a simple linear regression model to predict the response. 
 
 rm&medv-The slope for rm and medv is  9.102, since the p-value is extremely small(<2e-16), it is statistical significant. When the house size(average number of rooms) is larger will make the median value of homes bigger. I do think there is a positive relation between the two factors because usually bigger houses are more expensive.
@@ -213,7 +213,7 @@ summary(multiple_model)
 
 
 
-## Compare the results from simple regression and multiple regression
+# Compare the results from simple regression and multiple regression
 The conclusion is the same in both models but the B0(intercept) and B1(slope) value is slightly different.
 for B1
 simple regression:rm:9.102, lstat:-0.95005, crim:-0.41519 
