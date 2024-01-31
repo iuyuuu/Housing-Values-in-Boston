@@ -37,19 +37,6 @@ Loading libraries tidyverse
 ```R
 # Load standard libraries
 library("tidyverse")
-```
-
-    ── [1mAttaching core tidyverse packages[22m ──────────────────────── tidyverse 2.0.0 ──
-    [32m✔[39m [34mdplyr    [39m 1.1.4     [32m✔[39m [34mreadr    [39m 2.1.4
-    [32m✔[39m [34mforcats  [39m 1.0.0     [32m✔[39m [34mstringr  [39m 1.5.1
-    [32m✔[39m [34mggplot2  [39m 3.4.4     [32m✔[39m [34mtibble   [39m 3.2.1
-    [32m✔[39m [34mlubridate[39m 1.9.3     [32m✔[39m [34mtidyr    [39m 1.3.0
-    [32m✔[39m [34mpurrr    [39m 1.0.2     
-    ── [1mConflicts[22m ────────────────────────────────────────── tidyverse_conflicts() ──
-    [31m✖[39m [34mdplyr[39m::[32mfilter()[39m masks [34mstats[39m::filter()
-    [31m✖[39m [34mdplyr[39m::[32mlag()[39m    masks [34mstats[39m::lag()
-    [36mℹ[39m Use the conflicted package ([3m[34m<http://conflicted.r-lib.org/>[39m[23m) to force all conflicts to become errors
-
 
 Here we do the data cleaning of the Boston datase to make sure there aren't any missings.
 We can see that there are 14 variables and 506 obs in boston data frame.
@@ -60,23 +47,6 @@ boston<-read.delim("boston.csv.bz2")
 head(na.omit(boston))
 summary(boston)
 ```
-
-
-<table class="dataframe">
-<caption>A data.frame: 6 × 14</caption>
-<thead>
-	<tr><th></th><th scope=col>crim</th><th scope=col>zn</th><th scope=col>indus</th><th scope=col>chas</th><th scope=col>nox</th><th scope=col>rm</th><th scope=col>age</th><th scope=col>dis</th><th scope=col>rad</th><th scope=col>tax</th><th scope=col>ptratio</th><th scope=col>black</th><th scope=col>lstat</th><th scope=col>medv</th></tr>
-	<tr><th></th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
-</thead>
-<tbody>
-	<tr><th scope=row>1</th><td>0.00632</td><td>18</td><td>2.31</td><td>0</td><td>0.538</td><td>6.575</td><td>65.2</td><td>4.0900</td><td>1</td><td>296</td><td>15.3</td><td>396.90</td><td>4.98</td><td>24.0</td></tr>
-	<tr><th scope=row>2</th><td>0.02731</td><td> 0</td><td>7.07</td><td>0</td><td>0.469</td><td>6.421</td><td>78.9</td><td>4.9671</td><td>2</td><td>242</td><td>17.8</td><td>396.90</td><td>9.14</td><td>21.6</td></tr>
-	<tr><th scope=row>3</th><td>0.02729</td><td> 0</td><td>7.07</td><td>0</td><td>0.469</td><td>7.185</td><td>61.1</td><td>4.9671</td><td>2</td><td>242</td><td>17.8</td><td>392.83</td><td>4.03</td><td>34.7</td></tr>
-	<tr><th scope=row>4</th><td>0.03237</td><td> 0</td><td>2.18</td><td>0</td><td>0.458</td><td>6.998</td><td>45.8</td><td>6.0622</td><td>3</td><td>222</td><td>18.7</td><td>394.63</td><td>2.94</td><td>33.4</td></tr>
-	<tr><th scope=row>5</th><td>0.06905</td><td> 0</td><td>2.18</td><td>0</td><td>0.458</td><td>7.147</td><td>54.2</td><td>6.0622</td><td>3</td><td>222</td><td>18.7</td><td>396.90</td><td>5.33</td><td>36.2</td></tr>
-	<tr><th scope=row>6</th><td>0.02985</td><td> 0</td><td>2.18</td><td>0</td><td>0.458</td><td>6.430</td><td>58.7</td><td>6.0622</td><td>3</td><td>222</td><td>18.7</td><td>394.12</td><td>5.21</td><td>28.7</td></tr>
-</tbody>
-</table>
 
 
 
@@ -128,21 +98,7 @@ labs(x="Percentage of Lower Status of the Population", y="Median home value")
 
 ```
 
-    [1m[22m`geom_smooth()` using formula = 'y ~ x'
-    [1m[22m`geom_smooth()` using formula = 'y ~ x'
-
-
-
     
-![svg](output_6_1.svg)
-    
-
-
-
-    
-![svg](output_6_2.svg)
-    
-
 
 ## Simple regression to predict medium home value
 Here we make a simple linear regression model to predict the response. 
