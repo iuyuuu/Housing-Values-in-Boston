@@ -1,4 +1,4 @@
-![output_6_1](https://github.com/iuyuuu/Housing-Values-in-Boston/assets/108920364/4f90e583-0038-44e3-b1d7-6954c9e6cfb2)# Housing Values in Boston- Linear Regression 
+# Housing Values in Boston- Linear Regression 
 
 ---
 The Boston housing dataset contused in this analysis contains information about median house value for 506 neighborhoods in Boston, MA. It is collected in 1970s. 
